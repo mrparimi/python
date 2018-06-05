@@ -50,4 +50,7 @@ e=pickle.load(open("enlist.pkl","rb"))
 print(e['Display'])
 ```
 
-
+## removing spaces before wwords
+```
+proper_entity=[[l[0].strip()]for l in proper_entity]
+```
