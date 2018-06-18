@@ -54,3 +54,17 @@ print(e['Display'])
 ```
 proper_entity=[[l[0].strip()]for l in proper_entity]
 ```
+## Adding spaces
+```
+def clean_sentence(sent):
+    text = str(sent)
+    text = text.replace('/', " / ")
+    text = text.replace('-', ' - ')
+    text = text.replace('&', ' & ')
+    text = text.replace('?', " ?")
+    text = text.replace(',', " , ")
+    text = text.replace('\t', " ")
+    text = text.replace('\n', " ")
+    text = text.replace('$', " $ ")
+    return text
+```
