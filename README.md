@@ -68,3 +68,17 @@ def clean_sentence(sent):
     text = text.replace('$', " $ ")
     return text
 ```
+
+## spacy pipe
+## data_p is list
+```
+import spacy
+from spacy_lookup import Entity
+nlp = spacy.load('en')
+entity = Entity(keywords_list=data_p)
+nlp.add_pipe(entity, last=True)
+doc = nlp(u"India")
+temp=[]
+for i in range(len(doc._.entities)):
+    temp.append(doc._.entities[i][0])
+```
